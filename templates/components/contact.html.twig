@@ -1,0 +1,15 @@
+{% block main %}
+	<h1>
+		Page de contact
+	</h1>
+	<form method="POST" action="/traitement">
+		<input type="text" name="email" placeholder='entrez votre email'>
+		<textarea name="message"></textarea>
+		<button class="button">
+			Envoyer
+		</button>
+		{% if success is defined %}
+			<p>{{message}}</p>
+		{% endif %}
+	</form>
+{% endblock %}
